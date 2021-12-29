@@ -1,0 +1,31 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: anthony_wat
+      changes:
+        - createTable:
+            tableName: todo
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: summary
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: desc
+                  type: varchar(2000)
+              - column:
+                  name: createddt
+                  type: datetime
+                  constraints:
+                    nullable: false
+              - column:
+                  name: completeddt
+                  type: datetime
